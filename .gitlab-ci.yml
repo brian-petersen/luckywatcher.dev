@@ -1,0 +1,10 @@
+image: monachus/hugo:v0.72.0
+
+pages:
+  script:
+    - hugo --minify
+  artifacts:
+    paths:
+      - public
+  only:
+    - master
