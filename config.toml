@@ -16,6 +16,8 @@ pygmentsCodeFencesGuessSyntax = true
 [params]
   subtitle = "Thoughts, stories and ideas"
 
+  mainSections = ["posts", "haikus"]
+
 # Optional 64x64 avatar image.
   # avatar = "https://image.freepik.com/free-vector/young-man-head-with-beard-avatar-character_24877-36786.jpg"
 
@@ -39,15 +41,20 @@ name = "Posts"
 url = "/posts"
 weight = 2
 
+[[menu.main]]
+name = "Haikus"
+url = "/haikus"
+weight = 3
+
 # [[menu.main]]
 # name = "About"
 # url = "/about"
-# weight = 3
+# weight = 4
 
 [[menu.main]]
 name = "Tags"
 url = "/tags"
-weight = 4
+weight = 5
 
 [[params.social]]
 name = "Github"
