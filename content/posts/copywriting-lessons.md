@@ -1,7 +1,7 @@
 ---
 title: "Copywriting Lessons"
 date: 2020-11-14T08:43:35-07:00
-draft: false
+draft: true
 ---
 
 I really should take a step back and introduce the topic here.
@@ -64,7 +64,7 @@ Example headlines and tips:
     * *INSTANT CASH LOANS*
 2. If it's more than 3 words, Only Capitalize the First Letter of Each Word, Following Basic Grammar Rules.
     * *Big Johnson's Beer & Liquor if We Don't Have It, We'll Get It!*
-3. If you can tap into desire / emotion & be creative, then your headline will have more power.
+3. If you can tap into desire/emotion & be creative, then your headline will have more power.
     * *Unleashing the SUPER Ideavirus - Ideas that Spread, Win*
 4. Length is based on the headline's goal. If you need it processed fast, then use less words.
     * *How to Win Friends & Influence People*
