@@ -295,3 +295,54 @@ The server then does the following:
 I'm quite happy with my current deploy setup. I setup it up two years ago and haven't
 had any headaches with it. It is quite heavy compared to something like Heroku -- but
 I wanted to string something together for learning sake.
+
+## Additional Examples (Database, Data Persistence, etc.)
+
+Some services require a database for persistence, file storage for uploads, and runtime secrets.
+The following `docker-compose.yml` file shows how you can accomplish these things with this setup.
+
+```yml
+version: '3'
+
+services:
+  db:
+    image: postgres:11.5
+    restart: always
+    volumes:
+      - ./db_data:/var/lib/postgresql/data
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: ...
+      POSTGRES_DB: toastme
+
+  app:
+    image: registry.gitlab.com/brian_petersen/toastme:latest
+    restart: always
+    volumes:
+      - ./uploads:/app/lib/toastme-0.1.0/priv/static/uploads
+    networks:
+      - default
+      - web
+    labels:
+      - traefik.backend=slam
+      - traefik.docker.network=web
+      - traefik.frontend.rule=Host:slam.luckywatcher.dev
+      - traefik.enable=true
+      - traefik.port=4000
+    depends_on:
+      - db
+    environment:
+      DATABASE_URL: ecto://postgres:...@db/toastme
+      SECRET_KEY_BASE: ...
+    container_name: toastme
+
+networks:
+  web:
+    external: true
+```
+
+The container `app` is attached to networks `default` and `web` so that it
+can communicate to the database container and be picked up by `traefik`.
+
+Secrets are inlined into the `docker-compose.yml` file since the file is not
+public. Volumes mapped to local directories are used for data persistence.
