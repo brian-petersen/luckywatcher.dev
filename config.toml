@@ -1,35 +1,16 @@
 baseURL = "/"
 languageCode = "en-us"
 title = "LuckyWatcher"
-theme = "ink"
-paginate = 5
-
-copyright = "All rights reserved"
+theme = "luckywatcher"
 
 pygmentsStyle = "vs"
 pygmentsCodeFences = true
 pygmentsCodeFencesGuessSyntax = true
 
-# googleAnalytics = "UA-123-45"
-# disqusShortname = "ink-demo"
-
 [params]
-  subtitle = "Thoughts, stories and ideas"
-
-  mainSections = ["posts", "haikus"]
-
-  # Optional 64x64 avatar image.
-  # avatar = "https://image.freepik.com/free-vector/young-man-head-with-beard-avatar-character_24877-36786.jpg"
-
-  # Content types to disable Disqus on.
-  disableDisqusTypes = ["page"]
-
-  featherIconsCDN = true
-
-  mode = "auto" # "dark" or "auto"
-  # customCSS = "css/custom.css"  # Custom CSS applied to default styles.
-  # customDarkCSS = "css/custom-dark.css"  # Custom styles applied to dark mode css.
-  # customJS = ["js/custom.js", "js/custom1.js"]  # Custom JS scripts.
+subtitle = "Thoughts, stories and ideas"
+mainSections = ["posts"]
+mode = "auto"
 
 [[menu.main]]
 name = "Home"
@@ -42,29 +23,6 @@ url = "/about"
 weight = 2
 
 [[menu.main]]
-name = "Posts"
-url = "/posts"
-weight = 3
-
-[[menu.main]]
 name = "Tags"
 url = "/tags"
 weight = 4
-
-[[params.social]]
-name = "Github"
-icon = "github"
-url = "https://github.com/brian-petersen"
-
-[[params.social]]
-name = "Gitlab"
-icon = "gitlab"
-url = "https://gitlab.com/brian_petersen"
-
-[[params.social]]
-name = "RSS"
-icon = "rss"
-url = "/index.xml"
-
-[taxonomies]
-  tag = "tags"

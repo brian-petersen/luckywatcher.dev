@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+{{ partial "header.html" . }}
+<body>
+  <div class="container wrapper">
+    {{ partial "head.html" . }}
+
+    <main class="posts-list">
+      {{ $pages := where .Site.RegularPages "Type" "in" .Site.Params.mainSections }}
+      {{ $notHidden := where $pages "Params.hidden" "ne" true }}
+      {{ range $notHidden }}
+      <div class="post">
+        <h4 class="title">
+          <a href="{{ .RelPermalink }}">{{.Title}}{{ if .Draft }}<sup class="draft-label">DRAFT</sup>{{ end }}</a>
+        </h4>
+
+        <p class="date">{{ dateFormat "January 2, 2006" .Date }}</p>
+
+        {{ if isset .Params "description" }}
+        <p class="description">
+          {{ .Description }}
+        </p>
+        {{ end }}
+      </div>
+      {{ end }}
+    </main>
+  </div>
+
+  {{ partial "footer.html" . }}
+</body>
+</html>

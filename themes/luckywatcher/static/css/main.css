@@ -1,0 +1,317 @@
+body {
+  font-family: Arial, sans-serif;
+  font-size: 17px;
+  line-height: 1.8em;
+  color: #333;
+}
+
+html,
+button,
+input,
+select,
+textarea {
+  color: #333;
+}
+
+a {
+  color: #3700ff;
+  text-decoration: none;
+  word-break: break-word;
+}
+
+a:hover {
+  border-bottom: 2px solid #3700ff;
+}
+
+code {
+  word-break: break-all;
+}
+
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 1rem 0;
+  padding: 0;
+}
+
+img {
+  margin: 10px auto;
+  max-width: 100%;
+  display: block;
+}
+
+table {
+  -ms-overflow-style: -ms-autohiding-scrollbar;
+  -webkit-overflow-scrolling: touch;
+  background-color: transparent;
+  margin-bottom: 1rem;
+  overflow-x: auto;
+  width: 100%;
+}
+
+table th,
+table td {
+  border-bottom: 1px solid #dee2e6;
+  padding: 0.75rem;
+  vertical-align: top;
+}
+
+table thead th {
+  border-bottom: 2px solid #dee2e6;
+  vertical-align: bottom;
+}
+
+table tbody + tbody {
+  border-top: 2px solid #dee2e6;
+}
+
+table tbody tr:nth-of-type(even) {
+  background-color: rgba(0, 0, 0, 0.15);
+}
+
+table th {
+  background-color: #212529;
+  border-color: #32383e;
+  color: #fff;
+}
+
+blockquote {
+  margin-left: 1rem;
+  font-style: italic;
+  font-size: 1.4rem;
+  font-family: Georgia,bitstream charter,serif;
+  border-left: 3px solid;
+  border-color: #3700ff;
+  padding-left: 20px;
+}
+
+blockquote cite {
+  font-size: 70%;
+  opacity: .8;
+}
+
+blockquote em {
+  font-weight: 600;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: #333;
+  font-weight: 500;
+  line-height: 1.3em;
+  margin: 30px 0 20px 0;
+}
+
+h1 {
+  font-size: 2.75rem;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+h3 {
+  font-size: 1.6rem;
+}
+
+h4 {
+  font-size: 1.2rem;
+}
+
+h5 {
+  font-size: 1rem;
+}
+
+h6 {
+  font-size: .9rem;
+}
+
+ul {
+  padding-left: 15px;
+  list-style: disc inside;
+}
+
+ul.flat {
+  margin: 0;
+  padding: 0;
+}
+
+ul.flat li {
+  display: block;
+  list-style: none;
+  margin-left: 0;
+}
+
+.highlight pre {
+  margin-bottom: 0;
+  margin-top: 0;
+  padding: 20px;
+  background-color: transparent !important;
+  font-size: .9rem;
+  line-height: 1.2;
+}
+
+.highlight {
+  background: 0 0;
+  background-color: #FAFAFA;
+}
+
+.wrapper {
+  max-width: 760px;
+  margin: 0 auto;
+}
+
+.container {
+  margin-top: 50px;
+}
+
+.header {
+  margin-bottom: 30px;
+}
+
+.site-title {
+  margin: 0;
+  line-height: 1;
+}
+
+.site-title a {
+  color: #333;
+  text-decoration: none !important;
+}
+
+.site-title a:hover {
+  border-bottom-width: 3px;
+}
+
+.header nav {
+  border-top: 1px solid #eee;
+  padding-top: 15px;
+}
+
+.header nav ul,
+.header nav li {
+  margin: 0;
+  padding: 0;
+}
+
+.header nav li {
+  display: inline-block;
+  list-style: none;
+  margin: 0 30px 0 0;
+}
+
+.section .section-header {
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: #999;
+  margin-bottom: 20px;
+  letter-spacing: 1px;
+}
+
+.posts-list .post {
+  margin-bottom: 20px;
+}
+
+.posts-list .post .date {
+  margin: 0;
+}
+
+.post .title {
+  margin: 0;
+}
+
+.post .draft-label {
+  color: #3700ff;
+  text-decoration: none;
+  padding: 2px 4px;
+  border-radius: 4px;
+  margin-left: 6px;
+  background-color: #f9f2f4;
+}
+
+.post .date {
+  font-style: italic;
+}
+
+.post .description {
+  margin: 5px 0;
+}
+
+.post .tags a {
+  display: inline-block;
+  border: 1px solid #3700ff;
+  border-radius: 3px;
+  padding: 0px 6px;
+  color: #3700ff;
+  line-height: 20px;
+  font-size: 0.85em;
+  text-decoration: none;
+  margin: 0 10px 0 0;
+}
+
+.footer {
+  margin-top: 40px;
+  border-top: 1px solid #eee;
+  text-align: center;
+  font-size: 0.75em;
+  color: #999;
+  padding: 15px 0;
+}
+
+.tag-cloud {
+  margin-top: 20px;
+}
+
+.tag-cloud a {
+  margin-right: 15px;
+}
+
+@media (max-width: 900px) {
+  body {
+    padding: 20px;
+  }
+
+  h1 {
+    font-size: 1.8rem;
+  }
+
+  h2 {
+    font-size: 1.6rem;
+  }
+
+  h3 {
+    font-size: 1.2rem;
+  }
+
+  h4 {
+    font-size: 1rem;
+  }
+
+  .container {
+    margin-top: 10px;
+  }
+
+  .header .site-title {
+    line-height: 1;
+  }
+
+  .header .nav li {
+    margin: 0 10px 0 0;
+    font-size: 14px;
+  }
+
+  table {
+    -ms-overflow-style: -ms-autohiding-scrollbar;
+    -webkit-overflow-scrolling: touch;
+    display: block;
+    overflow-x: auto;
+    width: 100%;
+  }
+}
